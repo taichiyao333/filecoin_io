@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://filecoin.io/blog/filecoin-features-slashing/ -->
+<html lang="ja" class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ファイルコインの機能：スラッシュ</title>
+    <link rel="stylesheet" type="text/css" href="./ファイルコインの機能：スラッシュ_files/main.css">
+    
+    <link rel="icon" type="image/png" href="https://filecoin.io/vintage/images/icon-coin-128-new.png">
+    <link rel="alternate feed" href="https://filecoin.io/blog/feed/index.xml" type="application/rss+xml" title="ファイルコインブログ">
+
+    
+      <link rel="canonical" href="https://filecoin.io/blog/filecoin-features-slashing/">
+      <link rel="alternate" href="https://filecoin.io/blog/filecoin-features-slashing/" hreflang="x-default">
+    
+
+    <meta name="description" content="">
+    <meta name="author" content="Filecoin Project">
+    <meta name="theme-color" content="#00C5CA">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="">
+    <meta property="og:title" content="Filecoin Features: Slashing">
+    <meta property="og:image" content="https://filecoin.io/vintage/images/blog/filecoin-features-slashing.png">
+    <meta property="og:url" content="https://filecoin.io/blog/filecoin-features-slashing/">
+    <meta property="og:site_name" content="Filecoin">
+    <meta property="og:locale" content="en">
+    
+    <meta property="og:image:width" content="1268">
+    <meta property="og:image:height" content="635">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="Filecoin">
+    <meta name="twitter:title" content="Filecoin Features: Slashing">
+    <meta name="twitter:creator" content="Filecoin Project">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:domain" content="filecoin.io">
+    <meta name="twitter:image:src" content="https://filecoin.io/vintage/images/blog/filecoin-features-slashing.png">
+
+    <script async="" defer="" src="./ファイルコインの機能：スラッシュ_files/buttons.js.ダウンロード"></script>
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="./ファイルコインの機能：スラッシュ_files/translateelement.css"></head>
+
+<body class="section blog">
+  <header>
+    <nav class="navbar">
+  <div class="nav-items-left">
+    <a href="https://filecoin.io/" class="nav-item">
+      <img class="logo" src="./ファイルコインの機能：スラッシュ_files/filecoin-logo.png" alt="ファイルコインのロゴ" width="130">
+    </a>
+  </div>
+  <div class="nav-items-right">
+    <label class="menu-icon" for="menu-btn"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">☰</font></font></label>
+    <input class="menu-btn" type="checkbox" id="menu-btn">
+    <ul class="nav-items-right-inner">
+      <li class="nav-item">
+        <a href="https://filecoin.io/store"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">お店</font></font></a>
+      </li>
+      <li class="nav-item">
+        <a href="https://filecoin.io/mine"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">私の</font></font></a>
+      </li>
+      <li class="nav-item">
+        <a href="https://filecoin.io/build"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ビルド</font></font></a>
+      </li>
+      
+        
+        
+        
+        
+        <li class="nav-item">
+          <a href="https://filecoin.io/blog/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            ブログ
+          </font></font></a>
+        </li>
+      
+      </ul>
+  </div>
+</nav>
+
+  </header>
+
+  <div class="wrapper section-single">
+
+    
+
+
+    <div class="section-read-more">
+      <a href="https://filecoin.io/blog/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">←索引に戻る</font></font></a>
+    </div>
+
+    <div class="date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2020年11月17日</font></font></div>
+    <h2 class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ファイルコインの機能：スラッシュ</font></font></h2>
+    
+      <div class="cover-img">
+        <img alt="ファイルコインの機能：スラッシュ" src="./ファイルコインの機能：スラッシュ_files/filecoin-features-slashing.png">
+      </div>
+    
+
+    <div class="content">
+      <p>
+</p>
+      
+
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Filecoinの暗号化メカニズムと経済メカニズムの組み合わせは、参加者のインセンティブをネットワークの目標と使命に合わせるように設計されています。</font><font style="vertical-align: inherit;">ブロック報酬と取引支払いが主なインセンティブドライバーであるため、参加者がネットワークに対して行った約束から逸脱した場合の悪い行動を軽減する主な形態はスラッシュです。</font></font></p>
+
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Slashingは、ゲーム理論と意思決定科学を使用して、Filecoinのような分散型ストレージネットワークの最も重要な課題の1つを解決します。</font><font style="vertical-align: inherit;">集中管理がない場合、ファイルコインには、ネットワークの整合性を確保し、参加者のインセンティブを調整するための組み込みの方法が必要です。</font><font style="vertical-align: inherit;">スラッシュは、より広範なファイルコインエコシステムを犠牲にして自分の個人的な利益を最大化しようとする鉱山労働者を精錬することによってこれを達成するのに役立ちます。</font><font style="vertical-align: inherit;">スラッシュは、ファイルコインに参加しているマイナーにとって、ネットワークを維持するために常に誠実に行動することが最も合理的な選択であることを保証します。</font></font></p>
+
+<h2 id="how-slashing-works"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">スラッシュのしくみ</font></font></h2>
+
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ネットワークにストレージパワーを投入するすべての鉱夫は、ファイルコインの形で担保を差し入れる必要があります。</font><font style="vertical-align: inherit;">マイナーが過失または悪意を持って行動した場合、マイナーは「スラッシュ」されるか、担保の一部を没収することを余儀なくされます。</font><font style="vertical-align: inherit;">結局のところ、ネットワークの評判と信頼性が危機に瀕しています。</font><font style="vertical-align: inherit;">このように、スラッシュは、それに対する強力な経済的阻害要因を生み出すことによって、鉱山労働者からの悪い行動を思いとどまらせます。</font></font></p>
+
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">したがって、スラッシュは、Filecoinネットワーク上のすべてのマイナーを正直で信頼できる状態に保つために機能する一種の組み込みの阻害要因です。</font><font style="vertical-align: inherit;">鉱山労働者は、うまく行動する必要があります。そうしないと、ファイルコインの担保とストレージの能力を失うリスクがあります。</font></font></p>
+
+<h2 id="when-does-slashing-occur"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">スラッシュはいつ発生しますか？</font></font></h2>
+
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Filecoinマイナーが大幅に削減される可能性がある状況は3つあります。</font><font style="vertical-align: inherit;">これらは：</font></font></p>
+
+<ul>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ストレージ取引の期限が切れる前にマイナーがデータを削除したとき（契約の大幅な削減）。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">マイナーが要求されたときに時空の証明を提出しなかった場合（ストレージ障害の削減）。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">マイナーがFilecoinブロックチェーンをフォークしようとしたり、ブロックリーダーの選出を操作したりする場合（コンセンサススラッシュ）。</font></font></li>
+</ul>
+
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">これらの状況のそれぞれにおいて、鉱夫はネットワークへの約束を果たす方法で行動することができません。</font><font style="vertical-align: inherit;">それぞれを詳しく調べてみましょう。</font></font></p>
+
+<h2 id="broken-contract-slashing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">壊れた契約の削減</font></font></h2>
+
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">マイナーは、ファイルコインネットワーク上の「セクター」と呼ばれるストレージパーティションにデータを保存します。</font><font style="vertical-align: inherit;">各セクター内で、鉱山労働者はクライアントとストレージ取引契約を結び、取引担保を提供して、取引が適切に維持されるという保証と信頼を提供できます。</font><font style="vertical-align: inherit;">基本的なレベルの保証を提供するためにプロトコルで要求される最小限の取引担保があり、取引が終了した場合は削減されます。</font><font style="vertical-align: inherit;">ただし、鉱夫は、潜在的な顧客に高レベルのサービスと信頼性を示唆するために、より高い取引担保を提供することができます。</font></font></p>
+
+<p>The Filecoin network expects that miners will continuously store a clients’ files over the set period of time established by their storage contracts: Miners are responsible for keeping all sectors online and continuously available until the end of their contract period. Miners can fail to meet this expectation either by defaulting on a contract before it expires or by neglecting to store a client’s data continuously as promised.</p>
+
+<p>Miners can default on a contract in one of two ways, either by bringing their committed storage sector offline prior to the end date of a contract or by voluntarily terminating a contract prematurely. Miners who voluntarily terminate a contract are required to pay a termination fee. Miners who outright fail to keep their storage sectors online are slashed; they automatically have a portion of their Filecoin collateral confiscated and their storage power is reduced.</p>
+
+<h2 id="storage-fault-slashing">Storage fault slashing</h2>
+
+<p>As discussed in a previous <a href="https://filecoin.io/blog/filecoin-features-verifiable-storage/">post</a>, Filecoin uses a cryptographic protocol (proof system) to validate the acts of storage performed by miners for the network and to ensure that miners provide storage as promised. Part of that proof system is Filecoin’s unique Proof-of-Spacetime (PoSt), through which miners are daily issued a random cryptographic challenge (WindoPoSt) that can only be answered if a miner is able to consult the client data they committed to store, to validate that they are actually providing storage.</p>
+
+<p>Miners who fail at least one WindowPoSt are considered by the Filecoin protocol to be in a state of fault. Miners will lose storage power on the sector for which they are found to be at fault. Miners can only recover their sector power after they have successfully responded to a subsequent WindowPoSt.</p>
+
+<p>However, if a miner remains in this state for two consecutive days, a storage fault fee is slashed every day. After all, Filecoin only incentivizes reliable and useful storage and it is of paramount importance for storage clients to know that all data is stored reliably on Filecoin. If a sector reaches the maximum consecutive number of allowable days of failures, all the rewards earned by that sector and its initial pledge collateral will be slashed.</p>
+
+<h2 id="consensus-slashing">Consensus slashing</h2>
+
+<p>Blocks on the Filecoin blockchain are arranged into epochs. At every epoch, miners participate in leader elections to determine who will mine the next block of the Filecoin blockchain and receive its block rewards. Leaders are elected based on a pool of Filecoin miners selected for their storage power. The protocol by which leader elections are performed is called <em>Expected Consensus (EC)</em>.</p>
+
+<p>In a leader election, every miner draws a random seed provided by the <a href="https://filecoin.io/blog/distributed-randomness-and-leader-elections/">drand beacon</a>. Miners then perform an <em>Election Proof</em> function on this random seed. If the value generated by the Election Proof function is valid, then the miner is eligible to mine a block. When miners generate new blocks during EC, these blocks come together to form “tipsets,” families of blocks mined in the same epoch and connected to the same parent blocks from a previous epoch.</p>
+
+<p>Filecoin’s EC is unique in that many miners can win in a leader election: In every epoch, multiple valid blocks can be generated at once by different miners. To avoid splitting, or “forking”, the Filecoin blockchain into multiple competing chains, miners are required to agree that the canonical or true blockchain is the blockchain with the heaviest tipset, that is, the tipset with the most blocks in its history. Learn more about tipsets in <a href="https://filecoin.io/blog/tipsets-family-based-approach-to-consensus/">this post</a>.</p>
+
+<p>Consensus fault consists in mining two different blocks at the same height. When this occurs, miners’ storage is temporarily suspended and there is a penalty.</p>
+
+<p>Unlike storage faults and broken contract faults, consensus faults have to be reported by other miners in the Filecoin network; the process of slashing is not executed automatically in this case. Filecoin miners have an incentive to report consensus faults, however. Any Filecoin miner who detects and reports a consensus fault becomes the slasher. The slasher receives a portion of the slashed miner’s pledge collateral.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Filecoinネットワークは、スラッシュを使用して、鉱夫の不正行為に対する強力な経済的阻害要因を生み出します。</font><font style="vertical-align: inherit;">不正なマイナーは常に質権担保とストレージパワーの損失を維持するため、マイナーはファイルコインネットワークを無視したり妥協したりする正当な理由はありません。</font><font style="vertical-align: inherit;">このように、スラッシュは、クライアントがデータが約束どおりにマイナーによって保存されるという確信を与えるのに役立ちます。</font><font style="vertical-align: inherit;">したがって、スラッシュは、ファイルコインエコシステムの整合性、信頼性、および評判を保護するファイルコインプロトコルの機能です。</font></font></p>
+
+<script>
+var links = document.links;
+for (var i in links) { if (links[i].hostname != window.location.hostname) { links[i].target = '_blank'; } }
+</script>
+
+    </div>
+
+    <div class="section-read-more">
+      <a href="https://filecoin.io/blog/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">←索引に戻る</font></font></a>
+    </div>
+  </div>
+
+  <footer>
+  <div class="inner">
+    <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      で私たちに従ってください&nbsp;</font></font><a class="twitter" target="_blank" title="@Filecoin" href="https://twitter.com/Filecoin" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      @Filecoin
+      </font></font></a>
+    </div>
+  </div>
+</footer>
+<script src="./ファイルコインの機能：スラッシュ_files/main.js.ダウンロード"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-52930282-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async="" src="./ファイルコインの機能：スラッシュ_files/analytics.js.ダウンロード"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./ファイルコインの機能：スラッシュ_files/translate_24dp.png" width="20" height="20" alt="Google 翻訳"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">翻訳を改善する</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
